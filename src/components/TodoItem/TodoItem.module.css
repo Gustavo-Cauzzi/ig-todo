@@ -1,0 +1,39 @@
+.todoItemContainer {
+  display: grid;
+  width: 100%;
+
+  grid-template-columns: 20px 1fr 20px;
+  gap: 0.5rem;
+
+  padding: 0.75rem 0.75rem;
+  background-color: var(--gray-400);
+
+  border-radius: 8px;
+}
+
+.todoItemContainer p:not(.done) {
+  color: var(--gray-200);
+}
+
+.done {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.todoItemContainer > div {
+  padding-top: 0.1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 1.25rem;
+}
+
+.todoItemContainer > div > svg {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.todoItemContainer > div > svg:hover {
+  color: var(--danger);
+}
